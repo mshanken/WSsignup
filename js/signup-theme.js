@@ -33,7 +33,7 @@ $(function () {
 function pickwineregion( el ){
   // console.log('test:', el.checked);
   var checked = el.checked
-  var checkboxes = document.getElementsByName('ci-custom3');
+  var checkboxes = document.getElementsByName('CI_custom3');
   var marked = 0;
   if ( checked ){
 
