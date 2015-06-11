@@ -1,4 +1,4 @@
-.lead { background: #9E003A; }
+.lead { background: #9E003A; padding: 20px 0 25px; }
 .lead h1{ text-align: center; color: #fff; font-weight: 400; font-size: 90% }
 h3, .row-one label {font-size: 25px; font-weight: normal; }
 h3 span { color: #9e0039; }
