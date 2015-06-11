@@ -14,6 +14,7 @@ h3 span { color: #9e0039; }
 .has-feedback label~.form-control-feedback {
   top: 37px;
 }
+hr{ margin-top: 1px; }
 #CI_email-error, #CI_custom1-error{ color:#a94442; }
 .addmarginbottom{ margin-bottom: 50px; }
 @media (min-width: 768px) {}
