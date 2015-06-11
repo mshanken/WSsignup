@@ -37,12 +37,16 @@
 					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div><!-- empaty column -->
 					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
 						<div class="form-group">
-						    <label for="CI_email">Email</label>
+						    <label class="control-label" for="CI_email">Email</label>
 						    <input type="email" name="CI_email" class="form-control required" id="CI_email" placeholder="Enter email" maxlength="150" />
+						    <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+  							<span id="inputError2Status" class="sr-only">(error)</span>
 						</div><!-- /.form-group -->
 						<div class="form-group">
-						    <label for="CI_custom1">Zip Code/Postal Code</label>
-						    <input type="text" name="CI_custom1" class="form-control required" id="CI_custom1" placeholder="Zip Code/Postal Code" maxlength="255" />
+						    <label class="control-label" for="CI_custom1">Zip Code/Postal Code</label>
+						    <input type="text" name="CI_custom1" class="form-control required" id="CI_custom1" placeholder="Zip Code/Postal Code" maxlength="12" />
+						    <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+  							<span id="inputError2Status" class="sr-only">(error)</span>
 						</div><!-- /.form-group -->
 						<div class="form-group">
 						    <label for="Industry">Type of Industry (if applicable):</label>
@@ -79,57 +83,57 @@
 						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 form-group">
 							<div class="checkbox">
 								<label>
-								  	<input type="checkbox" onchange="populate()" name="ci-custom3" value="Red Wine Values" /> Red Wine Values
+								  	<input type="checkbox" name="ci-custom3" value="Red Wine Values" /> Red Wine Values
 								</label>
 							</div><!-- /.checkbox -->
 
 							<div class="checkbox">
 								<label>
-								  	<input type="checkbox" onchange="populate()" name="ci-custom3" value="White Wine Values" /> White Wine Values
+								  	<input type="checkbox" name="ci-custom3" value="White Wine Values" /> White Wine Values
 								</label>
 							</div><!-- /.checkbox -->
 
 							<div class="checkbox">
 								<label>
-								  	<input type="checkbox" onchange="populate()" name="ci-custom3" value="California"> California
+								  	<input type="checkbox" name="ci-custom3" value="California"> California
 								</label>
 							</div><!-- /.checkbox -->    
 						</div><!-- /.form-group -->
 						<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 form-group">
 							<div class="checkbox">
 								<label>
-								  	<input type="checkbox" onchange="populate()" name="ci-custom3" value="France" /> France
+								  	<input type="checkbox" name="ci-custom3" value="France" /> France
 								</label>
 							</div><!-- /.checkbox -->
 
 							<div class="checkbox">
 								<label>
-								  	<input type="checkbox" onchange="populate()" name="ci-custom3" value="Italy" /> Italy
+								  	<input type="checkbox" name="ci-custom3" value="Italy" /> Italy
 								</label>
 							</div><!-- /.checkbox -->
 
 							<div class="checkbox">
 								<label>
-								  	<input type="checkbox" onchange="populate()" name="ci-custom3" value="Spain"> Spain
+								  	<input type="checkbox" name="ci-custom3" value="Spain"> Spain
 								</label>
 							</div><!-- /.checkbox -->
 						</div><!-- /.form-group -->
 						<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 form-group">
 							<div class="checkbox">
 								<label>
-								  	<input type="checkbox" onchange="populate()" name="ci-custom3" value="Argentina / Chile" /> Argentina / Chile
+								  	<input type="checkbox" name="ci-custom3" value="Argentina / Chile" /> Argentina / Chile
 								</label>
 							</div><!-- /.checkbox -->
 
 							<div class="checkbox">
 								<label>
-								  	<input type="checkbox" onchange="populate()" name="ci-custom3" value="Australia / New Zealand" /> Australia / New Zealand
+								  	<input type="checkbox" name="ci-custom3" value="Australia / New Zealand" /> Australia / New Zealand
 								</label>
 							</div><!-- /.checkbox -->
 
 							<div class="checkbox">
 								<label>
-								  	<input type="checkbox" onchange="populate()" name="ci-custom3" value="Oregon / Washington"> Oregon / Washington
+								  	<input type="checkbox" name="ci-custom3" value="Oregon / Washington"> Oregon / Washington
 								</label>
 							</div><!-- /.checkbox -->
 						</div><!-- /.form-group -->
@@ -224,7 +228,7 @@
 					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div><!-- empaty column -->
 					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
 						<hr />
-						<p class="text-center"><input id="CI_submit" name="CI_submit" type="button" value="Submit" class="btn btnbig"></p>
+						<p class="text-center"><input id="CI_submit" name="CI_submit" type="submit" value="Submit" class="btn btnbig"></p>
 						<p class="text-center">I agree to receive any checked newsletters above, plus occasional news and offers from Wine Spectator. I can unsubscribe at any time.</p>	
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div><!-- empaty column -->
