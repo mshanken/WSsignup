@@ -50,7 +50,7 @@ function pickwineregion( el ){
   }
 }
 
-function populate() {
+/* function populate() {
   var checkboxes = document.getElementsByName('ci-custom3');
   var ip1 = document.getElementById('ci-custom3');
   
@@ -67,4 +67,4 @@ function populate() {
     }
 
   }
-}
+} */
