@@ -4,6 +4,7 @@ h3, .row-one label {font-size: 25px; font-weight: normal; }
 h3 span { color: #9e0039; }
 .row-two label { font-size: 18px; }
 .row-four strong { font-size: 16px; }
+.row-two em, .row-four em{ font-size: 14px; }
 .row-four { line-height: normal; }
 .btn{ background-color:#9e0039; color: #ffffff; padding: 2px 20px; margin:10px 0 20px; font-style: 16px; border-radius:1px; }
 .btn:hover{ color:#cecece;}
@@ -15,7 +16,7 @@ h3 span { color: #9e0039; }
   top: 37px;
 }
 hr{ margin-top: 1px; }
-#CI_email-error, #CI_custom1-error{ color:#a94442; }
+#CI_email-error, #CI_custom1-error, #CI_LID-error, #CI_custom3-error{ color:#a94442; }
 .addmarginbottom{ margin-bottom: 50px; }
 @media (min-width: 768px) {}
 @media (min-width: 992px) { .lead h1{ font-size: 36px; } }
