@@ -1,12 +1,17 @@
 $(function () {
 	$("#CI_subscribeForm").validate({
 		rules: {
-				CI_email:{email:true}
+			CI_email:{ email:true },
+			CI_LID: { required: true }
+		},
+		messages: {
+			CI_LID: "Please pick at least one from the list below",
+			CI_custom3: "Please select your wine interests for the Ratings Flash newsletter."
 		},
 		validClass: "success",
 		errorClass: "error",
 		errorElement:"em",
-		submitHandler: function() { form.submit(); },
+		submitHandler: function() { alert("form.submit();") },
 		success: function(label, element){
 			// console.log( "test2: ", label, element );
 			var _this = $(element).parent();
@@ -27,44 +32,25 @@ $(function () {
 			});
 		}
 	});
+	
+	$(".row-four input#2562328995").change(function(){
+		//console.log(this);
+		var checked = this.checked,
+				checkboxes = document.getElementsByName('CI_custom3'),
+				marked = 0;
+		if ( checked ){
 
+	    for (var i = 0, iLen = checkboxes.length; i < iLen; i++) {
+	      if (checkboxes[i].checked) {
+	          marked++
+	      }
+	    }
+	    // console.log(marked)
+	    if (!marked) {
+	      // alert("Please select your wine interests for the Ratings Flash newsletter.\n\nSee list at top of page.");
+	      $('#myModal').modal();
+	      this.checked = false;
+	    }
+	  }
+	})/*  */
 });
-
-function pickwineregion( el ){
-  // console.log('test:', el.checked);
-  var checked = el.checked
-  var checkboxes = document.getElementsByName('CI_custom3');
-  var marked = 0;
-  if ( checked ){
-
-    for (var i = 0, iLen = checkboxes.length; i < iLen; i++) {
-      if (checkboxes[i].checked) {
-          marked++
-      }
-    }
-    // console.log(marked)
-    if (!marked) {
-      alert("Please select your wine interests for the Ratings Flash newsletter.\n\nSee list at top of page.");
-      el.checked = false;
-    }
-  }
-}
-
-/* function populate() {
-  var checkboxes = document.getElementsByName('ci-custom3');
-  var ip1 = document.getElementById('ci-custom3');
-  
-  ip1.value = '';
-  
-  for (var i = 0, iLen = checkboxes.length; i < iLen; i++) {
-    if (checkboxes[i].checked) {
-
-      if (ip1.value.length === 0) {
-         ip1.value = checkboxes[i].value;
-      } else {
-         ip1.value = ip1.value + ',' + checkboxes[i].value;
-      }
-    }
-
-  }
-} */
