@@ -1,14 +1,20 @@
 function countUnchecked() {
   var n = $( ".row-two input[type=checkbox]:checked" ).length; // true if 0 checked
   var t = $( "input[type=checkbox]#2562328995:checked" ).length; // true if 0 checked
-
-  if( n  ){
+  console.log(n + (n == 1 ? " is" : " are") + " checked!");
+  console.log(t + (t == 1 ? " " : " un") + "checked!");
+  if( n ){
 	  if( !t ){
+	  	console.log(n,t);
 	  	$("#2562328995").attr("checked",true);
 	  }
 	} else {
 		if( t ){
+			console.log(n,t);
 			$('#myModal').modal();
+		} else {
+			console.log(n,t);
+			$("#2562328995").attr("checked",true);
 		}
 	}
 }
@@ -17,7 +23,7 @@ $(function () {
 		rules: {
 			CI_email:{ email:true },
 			CI_LID: { required: true }, 
-			CI_custom3: { required: countUnchecked }/* ,
+			/* ,CI_custom3: { required: countUnchecked }
 			"#2562328995": { required: true } */
 		},
 		messages: {
@@ -48,8 +54,8 @@ $(function () {
 			});
 		}
 	});
-	$( "input[type=checkbox]" ).click( countUnchecked );
-	/* $(".row-four input#2562328995").change(function(){
+	//$( ".row-two input[type=checkbox]" ).click( countUnchecked );
+	$(".row-four input#2562328995").change(function(){
 		//console.log(this);
 		var checked = this.checked,
 				checkboxes = document.getElementsByName('CI_custom3'),
@@ -68,5 +74,5 @@ $(function () {
 	      this.checked = false;
 	    }
 	  }
-	}) */
+	})/*  */
 });
