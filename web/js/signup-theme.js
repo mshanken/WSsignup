@@ -1,8 +1,26 @@
+function countUnchecked() {
+  var n = $( ".row-two input[type=checkbox]:checked" ).length; // true if 0 checked
+  var t = $( "input[type=checkbox]#2562328995:checked" ).length; // true if 0 checked
+  //c onsole.log(n + (n == 1 ? " is" : " are") + " unchecked!");
+  // console.log(t + (t == 1 ? " is" : " are") + " unchecked!");
+  //$('#myModal').modal();
+   if( n  ){
+	  if( !t ){
+	  	$("#2562328995").attr("checked",true);
+	  }
+	} else {
+		if(t){
+			$('#myModal').modal();
+		}
+	}
+}
 $(function () {
 	$("#CI_subscribeForm").validate({
 		rules: {
 			CI_email:{ email:true },
-			CI_LID: { required: true }
+			CI_LID: { required: true }, 
+			/* CI_custom3: { required: countUnchecked },
+			"#2562328995": { required: true } */
 		},
 		messages: {
 			CI_LID: "Please pick at least one from the list below",
@@ -11,7 +29,7 @@ $(function () {
 		validClass: "success",
 		errorClass: "error",
 		errorElement:"em",
-		submitHandler: function() { form.submit(); },
+		submitHandler: function() { alert("form.submit();") },
 		success: function(label, element){
 			// console.log( "test2: ", label, element );
 			var _this = $(element).parent();
@@ -32,8 +50,8 @@ $(function () {
 			});
 		}
 	});
-	
-	$(".row-four input#2562328995").change(function(){
+	$( "input[type=checkbox]" ).click( countUnchecked );
+	/* $(".row-four input#2562328995").change(function(){
 		//console.log(this);
 		var checked = this.checked,
 				checkboxes = document.getElementsByName('CI_custom3'),
@@ -52,5 +70,5 @@ $(function () {
 	      this.checked = false;
 	    }
 	  }
-	})/*  */
+	}) */
 });
