@@ -1,6 +1,6 @@
 .lead { background: #9E003A; padding: 20px 0 25px; }
-.lead h1{ text-align: center; color: #fff; font-weight: 400; font-size: 90% }
-h3, .row-one label {font-size: 25px; font-weight: normal; }
+.lead h1{ text-align: center; color: #fff; font-weight: 400; font-size: 120% }
+h3, .row-one label {font-size: 20px; font-weight: normal; }
 h3 span { color: #9e0039; }
 .row-two label { font-size: 18px; }
 .row-four strong { font-size: 16px; }
@@ -19,5 +19,11 @@ hr{ margin-top: 1px; }
 #CI_email-error, #CI_custom1-error, #CI_LID-error, #CI_custom3-error{ color:#a94442; }
 .addmarginbottom{ margin-bottom: 50px; }
 @media (min-width: 768px) {}
-@media (min-width: 992px) { .lead h1{ font-size: 36px; } }
-@media (min-width: 1200px) { .lead h1{ font-size: 36px; } }
+@media (min-width: 992px) {
+	.lead h1{ font-size: 36px; }
+	h3, .row-one label { font-size: 25px; }
+}
+@media (min-width: 1200px) {
+	.lead h1{ font-size: 36px; }
+	h3, .row-one label { font-size: 25px; }
+}
