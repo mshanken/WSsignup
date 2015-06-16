@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+ 	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	    <title>Newsletter Sign up | Wine Spectator</title>
+
+	    <!-- Bootstrap -->
+	    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/signup-theme.css">
+
+	    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 lead">
+					<h1>Open Up Your World of Wine<br />In Wine Spectator&#39;s e-Newsletters</h1>
+					<!-- <img src="images/WS_SubPage15-header.jpg" class="img-responsive center-block addmarginbottom" /> -->
+				</div>
+			</div><!-- /.row -->
+			<form action="http://portal.criticalimpact.com/procenter/procenter.cfm" name="CI_subscribeForm" id="CI_subscribeForm" method="get">
+				<input type="hidden" name="action" value="profile">
+				<input type="hidden" name="c" value="25682">
+				<input type="hidden" name="ext" value="1">
+
+				<div class="row row-one">
+					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div><!-- empaty column -->
+					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+						<p>Please enter your email address below to manage your email notifications from WineSpectator.com. (<a href="http://help.winespectator.com/support/home" target="_blank"><small>Help me with this page</small></a>.)</p>
+						<div class="form-group">
+						    <label class="control-label" for="email">Email</label>
+						    <input type="email" name="email" class="form-control required" id="email" placeholder="Enter email" maxlength="150" />
+						    <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+  							<span id="inputError2Status" class="sr-only">(error)</span>
+						</div><!-- /.form-group -->
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+				</div><!-- /.row -->
+
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div><!-- empaty column -->
+					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+						<hr />
+						<p class="text-center"><input id="CI_submit" name="submit" type="submit" value="Submit" class="btn btnbig"></p>
+						<p class="text-center">Need help with this page? <a href="http://help.winespectator.com/support/home"  target="_blank">Contact us</a>.</p>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div><!-- empaty column -->
+				</div><!-- /.row -->
+			</form>
+		</div><!-- /.container -->
+		
+		<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						 <h4 class="modal-title" id="exampleModalLabel">Warning!</h4>
+					</div>
+					<div class="modal-body">
+						<p>Please select your wine interests for the Ratings Flash newsletter.</p><p>See list at top of page.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
+		<script src="js/signup-theme.js"></script>
+	</body>
+</html>
