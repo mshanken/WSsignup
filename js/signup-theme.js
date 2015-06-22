@@ -19,7 +19,7 @@ function countUnchecked() {
 	}
 }
 function populate() { 
-	var checkboxes = document.getElementsByName('CI_custom3'); 
+	var checkboxes = document.getElementsByName('ci_custom3'); 
 	var ip1 = document.getElementById('ci-custom3');
 
 	ip1.value = '';
