@@ -19,7 +19,7 @@ function countUnchecked() {
 	}
 }
 function populate() { 
-	var checkboxes = document.getElementsByName('ci_custom3'); 
+	var checkboxes = document.getElementsByName('ci-custom3'); 
 	var ip1 = document.getElementById('ci-custom3');
 
 	ip1.value = '';
@@ -75,7 +75,7 @@ $(function () {
 	$(".row-four input#2562328995").change(function(){
 		//console.log(this);
 		var checked = this.checked,
-				checkboxes = document.getElementsByName('ci_custom3'),
+				checkboxes = document.getElementsByName('ci-custom3'),
 				marked = 0;
 		if ( checked ){
 
