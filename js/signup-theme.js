@@ -75,7 +75,7 @@ $(function () {
 	$(".row-four input#2562328995").change(function(){
 		//console.log(this);
 		var checked = this.checked,
-				checkboxes = document.getElementsByName('CI_custom3'),
+				checkboxes = document.getElementsByName('ci_custom3'),
 				marked = 0;
 		if ( checked ){
 
