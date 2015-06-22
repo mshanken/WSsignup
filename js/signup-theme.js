@@ -18,6 +18,23 @@ function countUnchecked() {
 		}
 	}
 }
+function populate() { 
+	var checkboxes = document.getElementsByName('CI_custom3'); 
+	var ip1 = document.getElementById('ci-custom3');
+
+	ip1.value = '';
+
+	for (var i = 0, iLen = checkboxes.length; i < iLen; i++) {
+
+		if (checkboxes[i].checked) {
+			if (ip1.value.length === 0) { 
+				ip1.value = checkboxes[i].value; 
+			} else { 
+				ip1.value = ip1.value + ',' + checkboxes[i].value; 
+			} 
+		} 
+	}
+} 
 $(function () {
 	$("#CI_subscribeForm").validate({
 		rules: {
@@ -33,7 +50,7 @@ $(function () {
 		validClass: "success",
 		errorClass: "error",
 		errorElement:"em",
-		submitHandler: function() { form.submit(); },
+		submitHandler: function(form) { form.submit(); },
 		success: function(label, element){
 			// console.log( "test2: ", label, element );
 			var _this = $(element).parent();
