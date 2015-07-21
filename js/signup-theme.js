@@ -92,17 +92,4 @@ $(function () {
 	    }
 	  }
 	})/*  */
-
-	var workWithThisFormIfExist2 = $("form[method='post']").length;
-
-	// Tracking link source
-	if(workWithThisFormIfExist2){
-		var url = window.location.search,
-			tmp = url.substring(url.indexOf('source=')+7, url.length);
-		// console.log(url.indexOf('email='));
-		if ( url.indexOf('source=') !== -1 ){
-			// console.log(1);
-			$("#CI_custom5").val(tmp);
-		}
-	}
 });
