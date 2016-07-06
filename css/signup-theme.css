@@ -18,6 +18,14 @@ h3 span { color: #9e0039; }
 .has-feedback label~.form-control-feedback {
   top: 37px;
 }
+input[type=checkbox] {
+ -ms-transform: scale(1.6); /* IE */
+ -moz-transform: scale(1.6); /* FF */
+ -webkit-transform: scale(1.4); /* Safari and Chrome */
+ -o-transform: scale(1.6); /* Opera */
+  padding: 10px;
+  font-size: 18px;
+}
 hr{ margin-top: 1px; }
 #CI_email-error, #CI_custom1-error, #CI_LID-error, #CI_custom3-error{ color:#a94442; }
 .addmarginbottom{ margin-bottom: 50px; }

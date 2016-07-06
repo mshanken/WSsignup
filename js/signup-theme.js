@@ -1,4 +1,4 @@
-    function countUnchecked() {
+function countUnchecked() {
   var n = $( ".row-two input[type=checkbox]:checked" ).length; // true if 0 checked
   var t = $( "input[type=checkbox]#2562328995:checked" ).length; // true if 0 checked
   console.log(n + (n == 1 ? " is" : " are") + " checked!");
@@ -95,21 +95,13 @@ $(function () {
     /* For Private Guide o Dining */
     $("#CI_subscribeForm_pg2d").validate({
         rules: {
-            CI_email:{ email:true },
-            /* CI_LID: { required: true },
-            ,CI_custom3: { required: countUnchecked }
-            "#2562328995": { required: true } */
-        },
-        messages: {
-            // CI_LID: "Please pick at least one from the list below",
-            // CI_custom3: "Please select your wine interests for the Ratings Flash newsletter."
+            CI_email:{ email:true }
         },
         validClass: "success",
         errorClass: "error",
         errorElement:"em",
         submitHandler: function(form) { form.submit(); },
         success: function(label, element){
-            // console.log( "test2: ", label, element );
             var _this = $(element).parent();
             if( $(_this).hasClass("has-error") ){
                 $(_this).removeClass("has-error").addClass("has-success");
@@ -118,7 +110,6 @@ $(function () {
             }
         },
         invalidHandler: function(event, validator){
-            // console.log("test:", validator, event, validator.invalid);
             $.each( validator.invalid, function( key, value ) {
                 // console.log( key + ": " + value );
                 var _this = $("#"+key).parent();
