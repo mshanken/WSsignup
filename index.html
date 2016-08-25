@@ -33,7 +33,7 @@
 			ga('send', {"hitType":"pageview","page":"/criticalimpact/optin/form","title":"Critical Impact optin form","dimension1":"criticalimpact_optin_form","dimension3":"criticalimpact"});
 		</script>
 		<!-- End UA code -->
-
+		<script src='https://www.google.com/recaptcha/api.js'></script>
 	</head>
 	<body>
 		<!-- Google Tag Manager-->
@@ -254,6 +254,15 @@
                         </div><!-- /.row -->
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div><!-- empaty column -->
+				</div><!-- /.row -->
+
+				<div class="row">
+					<div class="col-xs-12 text-center">
+						<br />
+						<div class="g-recaptcha hidden" data-sitekey="6LdOeSgTAAAAAKY4UL02_wbuIyeywFH--TCPhGrn" style="width:304px; margin: 10px auto 0;"></div>
+						<input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
+						<span id="inputError2Status" class="sr-only">(error)</span>
+					</div>
 				</div><!-- /.row -->
 
 				<div class="row">
