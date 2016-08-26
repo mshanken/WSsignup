@@ -39,9 +39,20 @@ function populate() {
 }
 $(function () {
 	$('#CI_subscribeForm').validate({
+		ignore: '.ignore',
 		rules: {
 			CI_email:{ email:true },
 			CI_LID: { required: true },
+			hiddenRecaptcha: {
+                required: function () {
+                    $('.g-recaptcha').removeClass('hidden');
+                    if (grecaptcha.getResponse() == '') {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            }
 			/* ,CI_custom3: { required: countUnchecked }
 			"#2562328995": { required: true } */
 		},
@@ -52,7 +63,7 @@ $(function () {
 		validClass: 'success',
 		errorClass: 'error',
 		errorElement:'em',
-		submitHandler: function(form) { form.submit(); },
+		submitHandler: function(form) { /*alert('send!');*/form.submit(); },
 		success: function(label, element){
 			// console.log( 'test2: ', label, element );
 			var _this = $(element).parent();
@@ -95,13 +106,24 @@ $(function () {
 	});
     /* For Private Guide o Dining */
     $('#CI_subscribeForm_pg2d').validate({
+        ignore: '.ignore',
         rules: {
-            CI_email:{ email:true }
+            CI_email:{ email:true },
+            hiddenRecaptcha: {
+                required: function () {
+                    $('.g-recaptcha').removeClass('hidden');
+                    if (grecaptcha.getResponse() == '') {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            }
         },
         validClass: 'success',
         errorClass: 'error',
         errorElement:'em',
-        submitHandler: function(form) { form.submit(); },
+        submitHandler: function(form) { /* alert('send!'); */form.submit(); },
         success: function(label, element){
             var _this = $(element).parent();
             if( $(_this).hasClass('has-error') ){
@@ -131,7 +153,7 @@ $(function () {
         for(var i = 0; i < url.length; i++){
             tmp = url[i].split('=');
             if ( tmp[0] === 'CI_LID' || tmp[0] === '?CI_LID'){
-                $('#'+tmp[1]).attr('checked','checked')
+                $('#'+tmp[1]).attr('checked','checked');
                 // console.log($('#'+tmp[1]).attr('checked','checked'));
             }
         }
