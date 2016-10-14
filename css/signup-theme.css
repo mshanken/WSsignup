@@ -2,7 +2,7 @@
 .lead h1{ text-align: center; color: #fff; font-weight: 400; font-size: 120% }
 h3, .row-one label {font-size: 20px; font-weight: normal; }
 h3 span { color: #9e0039; }
-.row-two label { font-size: 18px; }
+.row-two label, .checkbox label { font-size: 18px; }
 .row-four strong { font-size: 16px; }
 .row-two em, .row-four em{ font-size: 14px; }
 .row-two hr {
@@ -19,13 +19,14 @@ h3 span { color: #9e0039; }
   top: 37px;
 }
 input[type=checkbox] {
- -ms-transform: scale(1.6); /* IE */
- -moz-transform: scale(1.6); /* FF */
- -webkit-transform: scale(1.4); /* Safari and Chrome */
- -o-transform: scale(1.6); /* Opera */
+ /*  -ms-transform: scale(1.6);IE */
+ /*  -moz-transform: scale(1.6);FF */
+ /*  -webkit-transform: scale(1.4);Safari and Chrome */
+  /* -o-transform: scale(1.6);Opera */
   padding: 10px;
-  font-size: 18px;
 }
+.checkbox-item{ position: absolute; margin-left: -23px; font-size: 20px; color: #999; }
+.checkbox-item.glyphicon-check { color: #3b99fc; }
 hr{ margin-top: 1px; }
 #CI_email-error, #CI_custom1-error, #CI_LID-error, #CI_custom3-error, #hiddenRecaptcha-error{ color:#a94442; }
 .addmarginbottom{ margin-bottom: 50px; }
