@@ -1,5 +1,6 @@
 .lead { background: #9E003A; padding: 20px 0 25px; }
 .lead h1{ text-align: center; color: #fff; font-weight: 400; font-size: 120% }
+.lead h1 span{ font-size: 50%; line-height: 1; }
 h3, .row-one label {font-size: 20px; font-weight: normal; }
 h3 span { color: #9e0039; }
 .row-two label, .checkbox label { font-size: 18px; }
@@ -33,9 +34,11 @@ hr{ margin-top: 1px; }
 @media (min-width: 768px) {}
 @media (min-width: 992px) {
 	.lead h1{ font-size: 36px; }
+	.lead h1.retailerreport{ font-size: 50px; }
 	h3, .row-one label { font-size: 25px; }
 }
 @media (min-width: 1200px) {
 	.lead h1{ font-size: 36px; }
+	.lead h1.retailerreport{ font-size: 50px; }
 	h3, .row-one label { font-size: 25px; }
 }
