@@ -43,7 +43,7 @@ $(function () {
 		rules: {
 			CI_email:{ email:true },
 			CI_LID: { required: true },
-			hiddenRecaptcha: {
+			/* hiddenRecaptcha: {
                 required: function () {
                     $('.g-recaptcha').removeClass('hidden');
                     if (grecaptcha.getResponse() == '') {
@@ -53,7 +53,7 @@ $(function () {
                     }
                 }
             }
-			/* ,CI_custom3: { required: countUnchecked }
+			,CI_custom3: { required: countUnchecked }
 			"#2562328995": { required: true } */
 		},
 		messages: {
