@@ -157,7 +157,7 @@ $(function () {
         errorElement:'em',
         submitHandler: function(form) { /* alert('send!'); */form.submit(); },
         success: function(label, element){
-            var _this = $(element).parent();
+            var _this = ($(element).hasClass('form-check-input'))?$(element).parent().parent():$(element).parent();
             if( $(_this).hasClass('has-error') ){
                 $(_this).removeClass('has-error').addClass('has-success');
                 $(_this).find('span.glyphicon').removeClass('glyphicon-remove').addClass('glyphicon-ok');
@@ -167,7 +167,7 @@ $(function () {
         invalidHandler: function(event, validator){
             $.each( validator.invalid, function( key, value ) {
                 // console.log( key + ": " + value );
-                var _this = $('#'+key).parent();
+                var _this = ($("#"+key).hasClass('form-check-input'))?$("#"+key).parent().parent():$("#"+key).parent();
                 $(_this).addClass('has-success');
                 $(_this).addClass('has-error has-feedback');
                 $(_this).find('.form-control-feedback').css('display','block');
