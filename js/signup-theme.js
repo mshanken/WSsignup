@@ -43,6 +43,11 @@ $(function () {
 		rules: {
 			CI_email:{ email:true },
 			CI_LID: { required: true },
+            CI_proactive_agree_to_receive_emails: {
+                required: function(element) {
+                    return $("#CI_custom25").is(":checked");
+                }
+            }
 			/* hiddenRecaptcha: {
                 required: function () {
                     $('.g-recaptcha').removeClass('hidden');
@@ -66,7 +71,7 @@ $(function () {
 		submitHandler: function(form) { /*alert('send!');*/form.submit(); },
 		success: function(label, element){
 			// console.log( 'test2: ', label, element );
-			var _this = $(element).parent();
+			var _this = ($(element).hasClass('form-check-input'))?$(element).parent().parent():$(element).parent();
 			if( $(_this).hasClass('has-error') ){
 				$(_this).removeClass('has-error').addClass('has-success');
 				$(_this).find('span.glyphicon').removeClass('glyphicon-remove').addClass('glyphicon-ok');
@@ -77,7 +82,7 @@ $(function () {
 			// console.log("test:", validator, event, validator.invalid);
 			$.each( validator.invalid, function( key, value ) {
 				// console.log( key + ": " + value );
-				var _this = $('#'+key).parent();
+				var _this = ($("#"+key).hasClass('form-check-input'))?$("#"+key).parent().parent():$("#"+key).parent();
 				$(_this).addClass('has-success');
 				$(_this).addClass('has-error has-feedback');
 				$(_this).find('.form-control-feedback').css('display','block');
@@ -111,11 +116,31 @@ $(function () {
             $(this).prev().removeClass('glyphicon-check').addClass('glyphicon-unchecked');
         }
     });
+
+    $( "#CI_custom25" ).change(function() {
+        if( $(this).prop('checked') ){
+            $('#CI_subscribeForm').attr('action','//newsletters.mshanken.com/wc/wc7_verify.cfm');
+            $(this).val('Y');
+            // $('#CI_pproactive_agree_to_receive_emails').attr('required','required');
+            $("#GDPRContent").removeClass('hidden');
+        } else {
+            $('#CI_subscribeForm').attr('action','//newsletters.mshanken.com/wc/wc_verify.cfm');
+            $(this).val('N');
+            // $('#CI_pproactive_agree_to_receive_emails').prop('required',false);
+            $('#GDPRContent').addClass('hidden');
+        }
+    });
+    
     /* For Private Guide o Dining */
     $('#CI_subscribeForm_pg2d').validate({
         ignore: '.ignore',
         rules: {
             CI_email:{ email:true },
+            CI_proactive_agree_to_receive_emails: {
+                required: function(element) {
+                    return $("#CI_custom25").is(":checked");
+                }
+            }/*,
             hiddenRecaptcha: {
                 required: function () {
                     $('.g-recaptcha').removeClass('hidden');
@@ -125,7 +150,7 @@ $(function () {
                         return false;
                     }
                 }
-            }
+            }*/
         },
         validClass: 'success',
         errorClass: 'error',
