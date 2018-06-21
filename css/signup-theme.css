@@ -26,10 +26,12 @@ input[type=checkbox] {
   /* -o-transform: scale(1.6);Opera */
   padding: 10px;
 }
-.checkbox-item{ position: absolute; margin-left: -23px; font-size: 20px; color: #999; }
+.checkbox-item{ font-size: 20px; color: #999; }
+.form-group .checkbox-item{ position: absolute; margin-left: -23px; }
 .checkbox-item.glyphicon-check { color: #3b99fc; }
 hr{ margin-top: 1px; }
-#CI_email-error, #CI_custom1-error, #CI_custom2-error, #CI_custom3-error, #CI_LID-error, #hiddenRecaptcha-error{ color:#a94442; }
+#CI_email-error, #CI_custom1-error, #CI_custom2-error, #CI_custom3-error, #CI_LID-error, #hiddenRecaptcha-error, .error, .has-error span{ color:#a94442; }
+.form-check-label em.error{ font-size: 12px; }
 .addmarginbottom{ margin-bottom: 50px; }
 @media (min-width: 768px) {}
 @media (min-width: 992px) {
@@ -41,4 +43,8 @@ hr{ margin-top: 1px; }
 	.lead h1{ font-size: 36px; }
 	.lead h1.retailerreport{ font-size: 50px; }
 	h3, .row-one label { font-size: 25px; }
+}
+#GDPRContent.form-check {
+  margin-top: 20px;
+  margin-left: 30px;
 }
