@@ -26,8 +26,8 @@ input[type=checkbox] {
   /* -o-transform: scale(1.6);Opera */
   padding: 10px;
 }
-.checkbox-item{ font-size: 20px; color: #999; }
-.form-group .checkbox-item{ position: absolute; margin-left: -23px; }
+.checkbox-item{ font-size: 25px; color: #999; }
+.form-group .checkbox-item{ position: absolute; margin-left: -28px; }
 .checkbox-item.glyphicon-check { color: #3b99fc; }
 hr{ margin-top: 1px; }
 #CI_email-error, #CI_custom1-error, #CI_custom2-error, #CI_custom3-error, #CI_LID-error, #hiddenRecaptcha-error, .error, .has-error span{ color:#a94442; }
