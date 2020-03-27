@@ -34,6 +34,12 @@ hr{ margin-top: 1px; }
 .form-check-label em.error{ font-size: 12px; }
 .addmarginbottom{ margin-bottom: 50px; }
 @media (min-width: 768px) {}
+@media (max-width: 765px) {
+  .no-padding {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
 @media (min-width: 992px) {
 	.lead h1{ font-size: 36px; }
 	.lead h1.retailerreport{ font-size: 50px; }
